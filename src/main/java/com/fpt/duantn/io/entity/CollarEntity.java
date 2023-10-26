@@ -8,15 +8,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @Entity
-@Table(name="colors")
-public class ColorEntity implements Serializable {
+@Table(name="collar")
+public class CollarEntity implements Serializable {
 
     private static final long serialVersionUID = 5313493413859894403L;
 
@@ -24,15 +23,11 @@ public class ColorEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "color_name")
-    private String colorName;
+    @Column(name = "collar_name")
+    private String collarName;
 
-    @Column(name = "color_code")
-    private String colorCode;
-
-//    @OneToMany(mappedBy = "colorEntity", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-//    private List<ProductDetailEntity> productDetails;
-
+    @Column(name = "collar_code")
+    private String collarCode;
 
 
 }
